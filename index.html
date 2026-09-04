@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projet professionnel de Lisa Schneider : devenir Business Developer dans le secteur du numérique et de l'IT." />
+  <title>Mon projet professionnel — Business Developer</title>
+
+  <style>
+    :root{
+      --bg:#f7f5f2;
+      --paper:#ffffff;
+      --text:#202124;
+      --muted:#6f7277;
+      --line:#e5e1dc;
+      --accent:#7e1c41;
+      --accent-soft:#f5e9ef;
+      --gold:#b38a43;
+      --dark:#17181a;
+      --shadow:0 18px 50px rgba(28,24,22,.08);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    a{
+      color:inherit;
+    }
+
+    .container{
+      width:min(1120px, calc(100% - 40px));
+      margin:auto;
+    }
+
+    nav{
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter:blur(14px);
+      background:rgba(247,245,242,.86);
+      border-bottom:1px solid rgba(229,225,220,.85);
+    }
+
+    .nav-inner{
+      min-height:68px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+
+    .brand span{
+      color:var(--accent);
+    }
+
+    .nav-links{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      font-size:.92rem;
+      color:var(--muted);
+    }
+
+    .nav-links a:hover{
+      color:var(--accent);
+    }
+
+    header{
+      padding:92px 0 62px;
+      background:
+        radial-gradient(circle at 78% 24%, rgba(179,138,67,.16), transparent 26%),
+        radial-gradient(circle at 16% 18%, rgba(126,28,65,.12), transparent 24%),
+        linear-gradient(180deg, #fff 0%, var(--bg) 100%);
+      border-bottom:1px solid var(--line);
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      border-radius:999px;
+      background:var(--accent-soft);
+      color:var(--accent);
+      font-weight:700;
+      font-size:.82rem;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:20px 0 12px;
+      max-width:850px;
+      font-size:clamp(2.6rem, 6vw, 5.6rem);
+      line-height:.98;
+      letter-spacing:-.055em;
+    }
+
+    h1 .accent{
+      color:var(--accent);
+    }
+
+    .lead{
+      max-width:720px;
+      margin:0;
+      color:var(--muted);
+      font-size:1.16rem;
+    }
+
+    .hero-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:30px;
+    }
+
+    .pill{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.8);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:.9rem;
+    }
+
+    main{
+      padding:30px 0 80px;
+    }
+
+    section{
+      scroll-margin-top:90px;
+      padding:55px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .section-head{
+      display:grid;
+      grid-template-columns:260px 1fr;
+      gap:34px;
+      align-items:start;
+      margin-bottom:28px;
+    }
+
+    .kicker{
+      color:var(--accent);
+      font-weight:800;
+      font-size:.82rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    h2{
+      margin:0;
+      font-size:clamp(1.75rem, 3vw, 2.65rem);
+      line-height:1.1;
+      letter-spacing:-.035em;
+    }
+
+    .section-intro{
+      color:var(--muted);
+      margin:10px 0 0;
+      max-width:760px;
+    }
+
+    .grid{
+      display:grid;
+      gap:18px;
+    }
+
+    .grid-3{
+      grid-template-columns:repeat(3,1fr);
+    }
+
+    .grid-2{
+      grid-template-columns:repeat(2,1fr);
+    }
+
+    .card{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .card h3{
+      margin:4px 0 8px;
+      font-size:1.2rem;
+      line-height:1.25;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .number{
+      width:38px;
+      height:38px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      margin-bottom:16px;
+      background:var(--accent);
+      color:#fff;
+      font-weight:800;
+    }
+
+    .mini-label{
+      display:block;
+      margin-top:16px;
+      margin-bottom:5px;
+      color:var(--text);
+      font-weight:750;
+      font-size:.9rem;
+    }
+
+    .role-box{
+      background:var(--dark);
+      color:#fff;
+      padding:30px;
+      border-radius:var(--radius);
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:28px;
+    }
+
+    .role-box p{
+      color:#d7d7d7;
+    }
+
+    .role-list{
+      display:grid;
+      gap:10px;
+    }
+
+    .role-item{
+      padding:12px 14px;
+      border:1px solid rgba(255,255,255,.13);
+      border-radius:14px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .timeline{
+      display:grid;
+      gap:14px;
+    }
+
+    .step{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:19px 22px;
+      display:grid;
+      grid-template-columns:125px 1fr;
+      gap:18px;
+    }
+
+    .step strong{
+      color:var(--accent);
+    }
+
+    .method{
+      background:linear-gradient(135deg, #fff, #fbf7f9);
+      border:1px solid #ead5df;
+    }
+
+    .method p{
+      color:#555;
+    }
+
+    .method .tool{
+      display:inline-block;
+      margin-bottom:8px;
+      color:var(--accent);
+      font-weight:800;
+    }
+
+    .sources{
+      display:grid;
+      gap:11px;
+    }
+
+    .source{
+      display:flex;
+      gap:13px;
+      align-items:flex-start;
+      padding:15px 17px;
+      border-radius:15px;
+      background:#fff;
+      border:1px solid var(--line);
+    }
+
+    .source b{
+      color:var(--accent);
+      min-width:28px;
+    }
+
+    .source a{
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .source a:hover{
+      text-decoration:underline;
+    }
+
+    .transparency{
+      padding:28px;
+      border-radius:var(--radius);
+      background:var(--accent);
+      color:#fff;
+    }
+
+    .transparency p{
+      color:#f5e9ef;
+      margin-bottom:0;
+    }
+
+    footer{
+      padding:30px 0 48px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    footer strong{
+      color:var(--text);
+    }
+
+    @media (max-width:800px){
+      .nav-links{
+        display:none;
+      }
+
+      header{
+        padding-top:70px;
+      }
+
+      .section-head{
+        grid-template-columns:1fr;
+        gap:8px;
+      }
+
+      .grid-3,
+      .grid-2,
+      .role-box{
+        grid-template-columns:1fr;
+      }
+
+      .step{
+        grid-template-columns:1fr;
+        gap:5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <div class="brand">LISA <span>SCHNEIDER</span></div>
+
+      <div class="nav-links">
+        <a href="#metier">Le métier</a>
+        <a href="#competences">Compétences</a>
+        <a href="#plan">Plan d'action</a>
+        <a href="#demarche">Démarche IA</a>
+        <a href="#sources">Sources</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <header>
+    <div class="container">
+
+      <span class="eyebrow">
+        Mon projet professionnel augmenté par l'IA
+      </span>
+
+      <h1>
+        Devenir <span class="accent">Business Developer</span>
+        dans le numérique.
+      </h1>
+
+      <p class="lead">
+        Mon objectif est de développer une double compétence commerciale et stratégique,
+        tout en construisant une culture solide du secteur IT. Cette réflexion s'appuie
+        sur une recherche approfondie, des offres d'emploi récentes et mon futur
+        environnement professionnel chez Célios.
+      </p>
+
+      <div class="hero-meta">
+        <span class="pill">Master 1 Management de l'Innovation</span>
+        <span class="pill">IAE Limoges</span>
+        <span class="pill">Alternance : Business Developer chez Célios</span>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main class="container">
+
+
+    <section id="metier">
+
+      <div class="section-head">
+
+        <div class="kicker">
+          01 — Le métier
+        </div>
+
+        <div>
+          <h2>
+            Créer de nouvelles opportunités de croissance
+          </h2>
+
+          <p class="section-intro">
+            Le Business Developer ne se limite pas à vendre. Il analyse son marché,
+            identifie des opportunités, prospecte de nouveaux clients, comprend leurs
+            besoins, construit une proposition de valeur et développe une relation
+            commerciale dans la durée.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="role-box">
+
+        <div>
+          <h3>
+            Dans le secteur du numérique / IT
+          </h3>
+
+          <p>
+            La dimension commerciale s'accompagne d'une compréhension des solutions
+            technologiques. Le Business Developer doit être capable de dialoguer avec
+            des experts techniques et de traduire des offres parfois complexes en
+            bénéfices concrets pour le client.
+          </p>
+        </div>
+
+
+        <div class="role-list">
+
+          <div class="role-item">
+            Analyse de marché & veille concurrentielle
+          </div>
+
+          <div class="role-item">
+            Prospection multicanale & qualification
+          </div>
+
+          <div class="role-item">
+            Découverte du besoin & rendez-vous clients
+          </div>
+
+          <div class="role-item">
+            Propositions commerciales & négociation
+          </div>
+
+          <div class="role-item">
+            CRM, suivi du pipeline & KPI
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="card method" style="margin-top:18px">
+
+        <span class="tool">
+          Démarche IA — Recherche approfondie
+        </span>
+
+        <p>
+          J'ai utilisé ChatGPT pour réaliser une recherche approfondie sur le métier de
+          Business Developer avec un focus sur le numérique. Dans mon prompt, j'ai demandé
+          de croiser plusieurs sources et d'analyser obligatoirement l'APEC et France Travail.
+          J'ai ensuite complété la recherche avec des offres d'emploi récentes et avec
+          l'offre de Célios afin de rapprocher l'analyse de mon futur poste. J'ai comparé
+          les missions, compétences et outils cités par chaque source et conservé en priorité
+          les éléments convergents. J'ai notamment identifié que les offres récentes détaillent
+          davantage le CRM, LinkedIn, le pipeline commercial et les KPI. Les informations
+          utilisées sur ce site ont été reformulées et vérifiées à partir des sources
+          listées en bas de page.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="competences">
+
+      <div class="section-head">
+
+        <div class="kicker">
+          02 — Mes priorités
+        </div>
+
+        <div>
+
+          <h2>
+            Trois compétences à développer en priorité
+          </h2>
+
+          <p class="section-intro">
+            L'analyse de la recherche permet de hiérarchiser les compétences les plus
+            utiles pour réussir dans un poste de Business Developer dans l'IT et de
+            définir des moyens concrets pour progresser.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="grid grid-3">
+
+        <article class="card">
+
+          <div class="number">
+            1
+          </div>
+
+          <h3>
+            CRM & Social Selling
+          </h3>
+
+          <p>
+            Maîtriser les outils digitaux de prospection et de suivi commercial pour
+            structurer les contacts, enrichir les fichiers et piloter le pipeline.
+          </p>
+
+          <span class="mini-label">
+            Comment l'acquérir ?
+          </span>
+
+          <p>
+            Pratique quotidienne en alternance, utilisation du CRM, prospection
+            multicanale et entraînement sur LinkedIn.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <div class="number">
+            2
+          </div>
+
+          <h3>
+            Culture sectorielle IT
+          </h3>
+
+          <p>
+            Comprendre les problématiques numériques et apprendre à vulgariser des
+            offres comme la cybersécurité, l'infogérance ou les systèmes d'information.
+          </p>
+
+          <span class="mini-label">
+            Comment l'acquérir ?
+          </span>
+
+          <p>
+            Formation, veille régulière et observation des rendez-vous commerciaux
+            aux côtés de professionnels expérimentés.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <div class="number">
+            3
+          </div>
+
+          <h3>
+            Données & IA générative
+          </h3>
+
+          <p>
+            Savoir suivre les KPI, analyser la santé du pipeline et utiliser l'IA
+            comme outil d'efficacité sans perdre l'esprit critique.
+          </p>
+
+          <span class="mini-label">
+            Comment l'acquérir ?
+          </span>
+
+          <p>
+            Approfondir Excel, construire des tableaux de bord et expérimenter l'IA
+            en vérifiant systématiquement les résultats.
+          </p>
+
+        </article>
+
+      </div>
+
+
+      <div class="card method" style="margin-top:18px">
+
+        <span class="tool">
+          Démarche IA — Analyse des compétences
+        </span>
+
+        <p>
+          J'ai importé ma recherche sur le métier de Business Developer dans NotebookLM
+          afin d'identifier trois compétences prioritaires. Je lui ai demandé non seulement
+          de les hiérarchiser, mais aussi de proposer pour chacune des moyens réalistes
+          d'acquisition. J'ai retenu les compétences qui revenaient à la fois dans les
+          fiches métiers, dans les offres de 2026 et dans les missions de Célios. J'ai
+          ensuite reformulé certains éléments pour qu'ils correspondent davantage à ma
+          situation d'étudiante en alternance. Le résultat reste une proposition : ces
+          priorités devront être confrontées à mon expérience réelle en entreprise et
+          évoluer avec mes missions.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="plan">
+
+      <div class="section-head">
+
+        <div class="kicker">
+          03 — Passage à l'action
+        </div>
+
+        <div>
+
+          <h2>
+            Transformer la recherche en plan de progression
+          </h2>
+
+          <p class="section-intro">
+            L'objectif n'est pas seulement d'identifier des compétences, mais de prévoir
+            comment les développer concrètement.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline">
+
+        <div class="step">
+
+          <strong>
+            Dès l'alternance
+          </strong>
+
+          <div>
+            Prendre en main le CRM utilisé chez Célios, observer le cycle de vente
+            et participer aux actions de prospection et aux rendez-vous.
+          </div>
+
+        </div>
+
+
+        <div class="step">
+
+          <strong>
+            0–6 mois
+          </strong>
+
+          <div>
+            Construire une routine de veille IT, améliorer la qualification des prospects
+            et suivre quelques KPI simples : contacts, réponses, rendez-vous, conversions.
+          </div>
+
+        </div>
+
+
+        <div class="step">
+
+          <strong>
+            6–12 mois
+          </strong>
+
+          <div>
+            Gagner en autonomie sur la préparation des rendez-vous, la rédaction des
+            propositions commerciales et l'analyse du pipeline.
+          </div>
+
+        </div>
+
+
+        <div class="step">
+
+          <strong>
+            À terme
+          </strong>
+
+          <div>
+            Être capable de gérer une opportunité commerciale de manière plus autonome,
+            de la recherche du compte jusqu'au suivi de la relation client.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="illustration">
+
+      <div class="section-head">
+
+        <div class="kicker">
+          04 — Illustration
+        </div>
+
+        <div>
+
+          <h2>
+            Une représentation visuelle du métier
+          </h2>
+
+          <p class="section-intro">
+            Cette illustration synthétise le métier de Business Developer dans le
+            numérique et les compétences clés à développer.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="card" style="padding:14px; overflow:hidden">
+
+        <img
+          id="business-developer-illustration"
+          alt="Illustration du métier de Business Developer dans le numérique et de ses compétences clés"
+          style="width:100%;height:auto;display:block;border-radius:16px;"
+        >
+
+        <script>
+          document.getElementById("business-developer-illustration").src =
+          "data:image/webp;base64," +
+
+          "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" +
+
+          "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" +
+
+          "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" +
+
+          "RDX1f1lSJ7o4QpQ5ua6Yfg4mOVQQtqok8Nv9pyleUf+arVTXC0D99fxMMAGa68wMBRfpbY6e0vtdQ7Wcb7eZSKRFJlYNXS4i2rvVpG0t4d3IKdSO0G2PImnjwqUJ3ELnf/tQwbZITcAhWY3AMQubyoAHP9B7ASu7F4CfaOxdQcLhYKXDz7cskmPGzxgecfV+8oMvFjEz01NnkFTXAmsK3U/chiJfrUipUouCZSVe04+En/hJ/zMc6mSlLpRI88eutYohgAeqz7Ww6B/j+jSCOh3EcTd2rdB6RwCl6ziV1M161Tga7hbOhku1numAH/+bB2CrPbf/v3wLLCai3E1GduqHykYP92bpJXAZA+JrrF8noq0h91HfjvHnZZKbFQgfO8sHfY2milk8YEAmb51nq7x+3SR53QncQPbkdQUJ+vNuuq/6NTqJfymUH8gsF25Abzo30ifQMVUwz8+fDbO2umhiIYePV6uyelPY2mJJ3YWCBHOn8CXQqPlE+xzH3jnFCAPHp+/erOJdoJEEmDb7D/SOy+gTQbmd2eRdWVoi3cjsdl8jJshmThQ48AOBbMQ5pL6FjjWRvc0f1sQ/pgQZMTWJ8lx02j8BPfem1+khHBs44f4/hsU5V1jPBuaJj1TYDCxQtsbH7lu7J57QwzKML/JgBHFZ/zczX9ZZzst8xz0cjL7OFItmY9RWedUqe8+E3Torob0gkou1kKsMYyhWdek+FAV7KihbKMH4uWRSQjlLGFXCYOCcXcpFADq0YOkLD1lYWgXATOhZSs5LE8wWqzTgwG3FVOFhlvt/zV3w/mxW+6Nur+9mDOFiKB+EIC0BPGTeWfjmJQna4jfnHFg05lJ4TTysVY18YXWDQkDdFaN/I9Z2biomh1KrsZSae4cZ3ROZPJaxdiB6DtPKICxlv6/KWBfI3QYkAcigBlTnO+YQYBaUUe/hjZGVSkNCGYpzL3cLmn5CNQVLavg1LLTbp7s8Yv3m9/zS48SYJqNwlxNivcAA";
+        </script>
+
+      </div>
+
+
+      <div class="card method" style="margin-top:18px">
+
+        <span class="tool">
+          Démarche IA — Illustration du métier
+        </span>
+
+        <p>
+          J'ai utilisé un outil d'IA générative pour créer une illustration de synthèse
+          représentant le métier de Business Developer dans le numérique et les compétences
+          clés à développer. J'ai fourni comme contexte les missions du métier, les outils
+          utilisés au quotidien et les trois compétences prioritaires identifiées dans mon
+          analyse. J'ai demandé un visuel de type infographie professionnelle, clair et
+          structuré, afin qu'il puisse être facilement intégré au site. Le résultat permet
+          de synthétiser visuellement la recherche, mais certains éléments restent
+          nécessairement simplifiés par rapport à la réalité du métier. J'ai donc vérifié
+          que les notions affichées restaient cohérentes avec les sources utilisées dans
+          la recherche approfondie.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="demarche">
+
+      <div class="section-head">
+
+        <div class="kicker">
+          05 — Démarche
+        </div>
+
+        <div>
+
+          <h2>
+            Comment j'ai utilisé l'IA pour construire ce site
+          </h2>
+
+          <p class="section-intro">
+            La démarche et les choix sont visibles : l'IA a servi d'assistant de recherche,
+            d'analyse et de production, mais le contenu a été sélectionné, corrigé et
+            organisé en fonction de mon projet professionnel.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="grid grid-2">
+
+        <div class="card method">
+
+          <span class="tool">
+            Génération du site — ChatGPT
+          </span>
+
+          <p>
+            J'ai fourni à ChatGPT ma recherche approfondie, les trois compétences identifiées,
+            les consignes du devoir et le contexte de mon projet professionnel. Je lui ai
+            demandé de générer un site HTML/CSS clair, professionnel et lisible, sans
+            multiplier les informations inutiles. Une première structure a été organisée
+            autour du métier, des compétences, du plan d'action, des sources et de la
+            transparence sur l'IA. J'ai choisi de conserver une page unique pour faciliter
+            la navigation lors du pitch. J'ai également demandé que les sources soient
+            visibles et que chaque étape importante soit accompagnée d'une explication
+            de l'usage de l'IA. Le code reste modifiable avant publication afin de corriger
+            ou compléter le contenu.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Ce que je garde sous contrôle
+          </h3>
+
+          <p>
+            Les informations factuelles doivent être vérifiées dans les sources originales.
+            Les formulations proposées par l'IA ne remplacent pas mon jugement. Le choix des
+            trois compétences doit rester cohérent avec mon expérience réelle chez Célios.
+            Enfin, les outils et méthodes évoqués peuvent évoluer rapidement : le site
+            présente donc une photographie de mon projet à un instant donné.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="sources">
+
+      <div class="section-head">
+
+        <div class="kicker">
+          06 — Sources
+        </div>
+
+        <div>
+
+          <h2>
+            Des sources croisées et vérifiables
+          </h2>
+
+          <p class="section-intro">
+            Les fiches institutionnelles donnent le cadre du métier tandis que les offres
+            récentes permettent de confronter cette définition aux attentes opérationnelles
+            du marché.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="sources">
+
+        <div class="source">
+
+          <b>
+            01
+          </b>
+
+          <div>
+            <a
+              href="https://www.apec.fr/tous-nos-metiers/commercial-marketing/business-developer.html"
+              target="_blank"
+              rel="noopener"
+            >
+              APEC — Business Developer
+            </a>
+
+            <br>
+
+            <span>
+              Fiche métier : missions, compétences, formation, rémunération et évolutions.
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="source">
+
+          <b>
+            02
+          </b>
+
+          <div>
+            <a
+              href="https://www.francetravail.fr/actualites/le-dossier/fonction-support/le-responsable-du-developpement.html"
+              target="_blank"
+              rel="noopener"
+            >
+              France Travail — Responsable du développement commercial
+            </a>
+
+            <br>
+
+            <span>
+              Vision opérationnelle du développement commercial et des compétences attendues.
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="source">
+
+          <b>
+            03
+          </b>
+
+          <div>
+            <a
+              href="https://celios.fr/"
+              target="_blank"
+              rel="noopener"
+            >
+              Célios — Site officiel
+            </a>
+
+            <br>
+
+            <span>
+              Contexte de l'entreprise et de son activité dans le secteur du numérique / IT.
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="source">
+
+          <b>
+            04
+          </b>
+
+          <div>
+            <a
+              href="https://fr.linkedin.com/jobs/view/business-developer-f-h-at-celios-4451189088"
+              target="_blank"
+              rel="noopener"
+            >
+              Célios — Offre Business Developer
+            </a>
+
+            <br>
+
+            <span>
+              Exemple concret des missions, outils et qualités demandés en 2026.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section style="border-bottom:0; padding-bottom:25px">
+
+      <div class="transparency">
+
+        <strong>
+          Transparence sur l'utilisation de l'IA
+        </strong>
+
+        <p>
+          Ce site a été réalisé avec l'aide d'outils d'IA générative, notamment ChatGPT
+          et NotebookLM. L'IA a été utilisée pour rechercher, synthétiser, structurer et
+          mettre en forme des contenus ainsi que pour générer le code HTML/CSS.
+          Les informations principales ont été croisées avec des sources identifiées,
+          et les choix finaux de contenu relèvent de ma démarche personnelle.
+        </p>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <footer>
+
+    <div class="container">
+
+      <strong>
+        Lisa Schneider
+      </strong>
+
+      — Master 1 Management de l'Innovation, IAE Limoges · Projet réalisé dans le cadre
+      du module « Usages avancés de l'IA générative ».
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
